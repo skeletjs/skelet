@@ -6,10 +6,35 @@
   "engines": {
     "node": "7.7.4"
   },
-  "standard": {},
+  "standard": {
+    "globals": [
+      "describe",
+      "it"
+    ]
+  },
+  "nyc": {
+    "include": [
+      "**/node_modules/skelet-*/**.js",
+      "/lib/**.js"
+    ],
+    "exclude": [
+      "!**/node_modules/",
+      "coverage",
+      "**/tests/**",
+      "**.spec.js"
+    ],
+    "reporter": [
+      "text-summary",
+      "json-summary",
+      "lcov"
+    ],
+    "cache": true,
+    "all": true
+  },
   "scripts": {
     "start": "node lib/index.js",
-    "test": "standard && nyc --reporter=json-summary -a npm run mocha"
+    "test": "standard && nyc npm run mocha -- node_modules/skelet-*/**/*.spec.js",
+    "mocha": "./node_modules/.bin/_mocha --recursive"
   },
   "repository": {
     "type": "git",
@@ -29,7 +54,9 @@
   },
   "homepage": "https://github.com/skeletjs/skelet#readme",
   "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0",
+    "nyc": "^10.1.2"
   },
-  "dependencies": {
-  }
+  "dependencies": {}
 }
