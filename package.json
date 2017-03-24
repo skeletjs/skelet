@@ -1,0 +1,35 @@
+{
+  "name": "skelet",
+  "version": "0.0.1",
+  "description": "A Node.js framework heavily inspired by Laravel",
+  "main": "lib/index.js",
+  "engines": {
+    "node": "7.7.4"
+  },
+  "standard": {},
+  "scripts": {
+    "start": "node lib/index.js",
+    "test": "standard && nyc --reporter=json-summary -a npm run mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/skeletjs/skelet.git"
+  },
+  "keywords": [
+    "skelet",
+    "skeletjs"
+  ],
+  "author": [
+    "Bart Van Remortele <email@some.thing> (http://url.here)",
+    "Sven Meys <email@some.thing> (http://url.here)"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/skeletjs/skelet/issues"
+  },
+  "homepage": "https://github.com/skeletjs/skelet#readme",
+  "devDependencies": {
+  },
+  "dependencies": {
+  }
+}

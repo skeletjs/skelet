@@ -1,0 +1,5 @@
+# Exclude node modules, except skelet modules
+node_modules/*
+!node_modules
+!node_modules/skelet-*
+!node_modules/skelet
